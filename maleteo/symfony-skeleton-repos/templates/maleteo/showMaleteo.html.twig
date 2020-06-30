@@ -1,0 +1,37 @@
+{% extends 'maleteo/maleteo.html.twig' %}
+
+{% block cuerpo %}
+<div>
+    <h1>REGISTRO DE SOLICITUDES</h1>
+</div>
+<div class="centrarFormulario">
+<table class="tablaFormulario">
+    {% for dato in datos %}
+        <tr>
+            <td>Nombre :
+            <td>{{ dato.nombre }}
+        </tr>
+        <tr>
+            <td>Email :
+            <td>{{ dato.email }}
+        </tr>
+        <tr>
+            <td>Ciudad :
+            <td>{{ dato.ciudad }}
+        </tr>
+        <tr class="trsep"></tr>
+    {% endfor %}
+</table>
+</div>
+
+
+
+{% block boton %}
+{% endblock %}
+<input type="button" class="home" value="Home" name="home" id="home" onclick = "location.href = '{{path('maleteo')}}'">
+
+
+{% endblock %}
+
+
+

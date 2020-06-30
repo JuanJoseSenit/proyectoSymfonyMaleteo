@@ -1,0 +1,20 @@
+{% extends 'maleteo/maleteo.html.twig' %}
+
+{% block cuerpo %}
+<div>
+    <h1>SOLICITUD DE DEMO</h1>
+</div>
+
+<div class="mensajeConfirmacion">
+<p style="text-align: center" >No se ha podido llevar a cabo el registro. Vuelva a intentarlo</p>
+</div>
+    
+
+
+
+{% block boton %}
+{% endblock %}
+<input type="button" class="home" value="Home" name="home" id="home" onclick = "location.href = '{{path('maleteo')}}'">
+
+
+{% endblock %}

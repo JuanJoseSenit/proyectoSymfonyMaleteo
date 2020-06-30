@@ -1,0 +1,47 @@
+{% extends 'maleteo/maleteo.html.twig' %}
+
+{% block estiloOpinion %}
+<link rel="stylesheet" href="css/maleteoOpinion.css">
+{% endblock %}
+
+{% block cuerpo %}
+<div>
+    <h1>OPINIONES</h1>
+</div>
+
+<div class="formularioOpinion">
+    
+    <form method="post" action="{{path('opinion')}}">
+        <table class="tablaOpinion">
+        <tr>
+            <td><label for="opinion">Opinión</label></td>
+            <td><input type="text" id="opinion" class="opinion" name="opinion" required placeholder="Deje su opinión"></td>
+        </tr>
+
+         <tr>
+            <td><label for="nombreOpinion">Nombre</label></td>
+            <td><input type="text" id="nombreOpinion" class="nombreOpinion" required name="nombreOpinion"></td>
+         </tr>
+
+         <tr>
+             <td><label for="nombreOpinion">Localización</label></td>
+           <td> <input type="text" id="localizacion" class="localizacion" required name="localizacion"></td>
+         </tr>
+
+         <tr>
+            <td><input type="submit" class="boton" name="botonOpinion" value="ENVIAR"></td>
+         </tr>
+         </table>
+
+    </form>
+
+</div>
+
+
+
+{% block boton %}
+{% endblock %}
+<input type="button" class="home" value="Home" name="home" id="home" onclick = "location.href = '{{path('maleteo')}}'">
+
+
+{% endblock %}

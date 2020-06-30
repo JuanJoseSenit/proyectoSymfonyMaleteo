@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/maleteo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    {% block estiloOpinion %}
+        
+    {% endblock %}
+</head>
+<body>
+   
+    <header class="header">
+        <img src="assets/img/logo.svg" >
+    
+    </header>
+    {% block cuerpo %}
+
+    <section class="jumbotron">
+        
+
+        <div class="mensaje">
+            <div class="titulo_mensaje">
+                <p>Gana dinero guardando equipaje a viajeros como tú </p>
+                
+                
+
+            </div>
+            <div class="imagenes">
+                <picture>
+                    <img src="assets/img/app-store.svg" class="img-responsive">
+                </picture>
+            
+                <picture>
+                    <img src="assets/img/google-play.svg" class="img-responsive">
+                </picture>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div class="como_funciona">
+        <p><h1>¿Cómo funciona?</h1></p>
+    </div>
+    <section class="pasos">
+        
+        
+        <article class="paso">
+            <div class="numero">
+                <p>1</p>
+            </div>
+            <div class="contenido1">
+                <p><h2>Date de alta</h2></p>
+            </div>
+            <div class="olla">
+                <p>Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados</p>
+            </div>
+
+        </article>
+        <article class="paso">
+            <div class="numero" >
+                <p>2</p>
+            </div>
+            <div>
+                <p><h2>Date de alta</h2></p>
+            </div>
+            <div class="olla">
+                <p>Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados</p>
+               
+            </div>
+
+        </article>
+        <article class="paso">
+            <div class="numero">
+                <p>3</p>
+            </div>
+            <div>
+                <p><h2>Date de alta</h2></p>
+            </div>
+            <div class="olla">
+                <p>Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados</p>
+            </div>
+
+        </article>
+      
+        
+
+
+    </section>
+
+    <section class="contenedor_movil_formulario">
+        <div>
+            <picture class="imagen_movil">
+                <img src="assets/img/iPhoneX.png" class="animated infinite pulse delay-2s">
+            
+            </picture>
+        </div>
+        
+        <div class="formulario">
+
+            <form class="form" id="registro" method="post" action="{{path('maleteo')}}">
+                <p><h3>Solicita una demo</h3></p>
+                <p>Nombre</p>
+                <input type="text" class="nombre" name="nombre" id="nombre" required="required" placeholder="Vicent Chase">
+                <p>Email</p>
+                <input type="email"class="email" name="email" id="email" required="required" placeholder="vicent@mga.com">
+                <p>Ciudad</p>
+                <select name="seleccion">
+                    <option value="Madrid">Madrid</option>
+                    <option value="Barcelona">Barcelona</option>
+                </select>
+                <div class="checkbox">
+                    <input type="checkbox" required="required" class="aceptar" name="checkbox">Aceptas la <a class="vinculo" href="{{path('privacidad')}}">política de privacidad</a>
+                </div>
+
+                <div><input type="submit" value="ENVIAR" name="boton" class="boton" id="boton"></div>
+            
+            </form>
+        </div>
+
+    </section>
+
+    <h2 class="parrafo_opiniones">Opiniones de otros guardianes</h2>
+    <div>
+        <p>Danos tu <a href="{{path('opinion')}}">opinion</a> por aquí. Su colaboración nos hará mejorar</p>
+        
+    </div> 
+    <section class="opiniones">
+       
+        <div class="opinion">
+            
+            <div class="opinion_cuadrado">
+                <p>{{datos[0].comentario}}</p>
+            </div>
+            <div>
+                <p>{{datos[0].nombre}}</p>
+                <p>{{datos[0].localizacion}}</p>
+            </div>
+        </div>
+
+        <div class="opinion">
+            
+            <div class="opinion_cuadrado">
+                <p>{{datos[1].comentario}}s</p>
+            </div>
+            <div >
+                <p>{{datos[1].nombre}}</p>
+                <p>{{datos[1].localizacion}}</p>
+            </div>
+        </div>
+
+        <div class="opinion">
+            
+            <div class="opinion_cuadrado">
+                <p>{{datos[2].comentario}}</p>
+            </div>
+            <div>
+                <p>{{datos[2].nombre}}</p>
+                <p>{{datos[2].localizacion}}</p>
+            </div>
+        </div>
+        
+
+    </section>
+    {% endblock %}
+    <footer class="footer">
+        <picture>
+            <img src="assets/img/logo.svg" class="img-responsive">
+        </picture>
+        <p>Hecho con <span style="font-size: 25px;color: red;">&hearts;</span> en Madrid</p>
+
+
+    </footer>
+
+{% block boton %}
+    <script src="js/maleteo.js"></script>
+{% endblock %}
+
+    
+</body>
+</html>

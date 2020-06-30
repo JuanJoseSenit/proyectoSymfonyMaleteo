@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bienvenidos a mi blog{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <h1>ESTO ES UN HEADER PARA TODAS LAS PÁGINAS</h1>
+        </header>
+        <ul>
+            <li><a href ="/Yo">Quien soy</a></li>
+            <li><a href= /Formulario>Formulario</a></li>
+            <li>Contactame</li>
+        <ul>
+        {% block body %}
+          <h1>hola gente</h1>
+          <h2>Hola soy:{{nombre}}</h2>
+        
+        {% endblock %}
+        {% block body2 %}
+            <p>Ahora soy un parrafo que cambio a....</p>
+        {% endblock %}
+        
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

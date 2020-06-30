@@ -1,0 +1,42 @@
+{% extends 'maleteo/maleteo.html.twig' %}
+
+{% block estiloOpinion %}
+<link rel="stylesheet" href="css/maleteoOpinion.css">
+{% endblock %}
+
+{% block cuerpo %}
+<h1>REGISTRO</h1>
+<p style="color: red">{{mensaje}}</p>
+<div class="formularioOpinion">
+    <form method="post" action="{{path('registro')}}">
+        <table class="tablaOpinion">
+            <tr>
+                <td><label>Nombre de usuario</label></td>
+                <td><input type="text" name="nombreRegistro"></td>
+             </tr>
+            <tr>
+                <td><label>Contraseña</label></td>
+                <td><input type="password" name="passwordRegistro"></td>
+            </tr>
+            <tr>
+                <td><label>Repita contraseña</label></td>
+                <td><input type="password" name="passwordValidarRegistro"></td>
+            </tr>
+
+
+            <tr>
+                <td><input type="submit" value="REGISTARSE"></td>
+            </tr>
+        </table>
+    
+
+
+    </form>
+</div>
+
+{% block boton %}
+{% endblock %}
+<input type="button" class="home" value="LOGIN" name="login" id="LOGIN" onclick = "location.href = '{{path('login')}}'">
+
+
+{% endblock %}
